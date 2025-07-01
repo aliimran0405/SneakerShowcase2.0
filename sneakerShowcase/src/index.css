@@ -1,0 +1,233 @@
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+/* GLOBAL STYLES */
+
+
+/* NAV BAR BEGIN */
+.nav-container {
+    width: 100%;
+    background-color: hsl(0, 0%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    flex: 1;
+    text-align: left;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-spacer {
+    flex: 1;
+}
+/* NAV BAR END */
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 40px 10px 40px;
+}
+
+.home-container h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+input {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+
+/* CARD STYLES BEGIN*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 35px;
+  justify-content: center;
+}
+
+.card-wrapper {
+  background-color: white;
+  border: 1px solid hsl(0, 0%, 80%);
+  width: 240px;
+  transition: 0.5s ease-in-out;
+}
+
+
+.card-wrapper:hover {
+    background-color: hsl(0, 0%, 90%);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.card-container .shoe-img {
+    width: 100%;
+    height: 40vh;
+}
+
+.card-container .brand-name, .card-container .sneaker-name {
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.card-container .brand-name {
+    font-weight: bold;  
+}
+
+.card-container .sneaker-name {
+    padding-bottom: 10px;
+}
+/* CARD STYLES END */
+
+/* SHOE DETAIL PAGE BEGIN */ 
+.shoe-details {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+  padding: 0 40px;
+}
+
+
+.imgs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+
+.imgs img {
+  width: 370px; 
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: .6s ease-in-out;
+}
+
+.imgs img:hover {
+    width: 390px;
+}
+
+
+.description {
+  max-width: 400px;
+}
+
+.description p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.description a {
+    color: black;
+    text-decoration: none;
+}
+/* SHOE DETAIL PAGE END */
+
+/* ABOUT BEGIN */
+
+.about-text-area {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.about-text-area p {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.change-text-button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.change-text-button:hover {
+    color: #ffffff;
+    background: black;
+    border: 1px solid black;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px black, 0 0 20px black, 0 0 50px black, 0 0 100px black;
+}
+
+.change-text-button:focus {
+    outline: none; 
+    color: #ffffff;
+    background: black;
+    border: 1px solid black;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px black, 0 0 20px black, 0 0 50px black, 0 0 100px black;
+}
+
+.about-us-container {
+    background-image: url("../assets/sneaker_mashup.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh; /* or adjust based on your layout */
+    position: relative;
+}
+
+/* ABOUT END */

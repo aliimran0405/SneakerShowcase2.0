@@ -1,0 +1,4 @@
+GET http://localhost:5260/sneakers
+
+###
+GET http://localhost:5260/sneakers/1

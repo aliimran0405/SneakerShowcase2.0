@@ -28,12 +28,12 @@ public class SneakerShowcaseContext(DbContextOptions<SneakerShowcaseContext> opt
             new Sneaker
             {
                 Id = 2,
-                ShoeImg = "/assets/adidas-ultraboost.webp",
+                ShoeImg = "/assets/campus-00s-shoe.webp",
                 MainImg = "/assets/2-m.webp",
                 BrandName = "Adidas",
-                SneakerName = "Adidas Ultraboost Light",
-                Description = "Ultraboost running shoes made for high-performance comfort.",
-                Link = "https://www.adidas.com/us/ultraboost-light-shoes/ID9684.html"
+                SneakerName = "Campus 00S",
+                Description = "Campus 00S running shoes made for high-performance comfort.",
+                Link = "https://www.adidas.com/us/campus-00s-shoes/GY6433.html"
             }
         );
     }

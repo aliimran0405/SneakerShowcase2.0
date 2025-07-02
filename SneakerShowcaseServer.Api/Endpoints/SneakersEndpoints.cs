@@ -31,7 +31,7 @@ public static class SneakersEndpoints
 
     public static RouteGroupBuilder MapSneakersEndpoints(this WebApplication app)
     {
-        var group = app.MapGroup("sneakers").WithParameterValidation();
+        var group = app.MapGroup("/api/sneakers").WithParameterValidation();
 
         group.MapGet("/", (SneakerShowcaseContext dbContext) =>
         {

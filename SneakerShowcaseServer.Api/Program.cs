@@ -1,5 +1,8 @@
 using SneakerShowcaseServer.Api.Data;
 using SneakerShowcaseServer.Api.Endpoints;
+using SneakerShowcaseServer.Api.Entities;
+using SneakerShowcaseServer.Api.UtilsDir;
+using System;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +23,16 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+using var scope = app.Services.CreateScope();
+var db = scope.ServiceProvider.GetRequiredService<SneakerShowcaseContext>();
+
+if (!db.Sneakers.Any())
+{
+    var sneakers = Utils.ReadJSON(); // read JSON here, where environment is ready
+    db.Sneakers.AddRange(sneakers);
+    db.SaveChanges();
+}
 
 app.UseCors();
 

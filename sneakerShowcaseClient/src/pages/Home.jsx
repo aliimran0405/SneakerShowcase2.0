@@ -1,6 +1,5 @@
 import Card from "../Components/Card";
 import React, { useEffect, useState } from "react";
-import { data } from "./../Data";
 
 
 function Home(props) {
@@ -22,7 +21,6 @@ function Home(props) {
     
     return(
         <>
-            {console.log("RESPONSE: ", getSneakers)}
             <div className="home-container">
                 <h1>FIND THE PERFECT SNEAKERS FOR YOU</h1>
                 <input type="text" value={props.query} onChange={e => props.setQuery(e.target.value)} placeholder="Search for Sneakers"></input>
@@ -30,7 +28,7 @@ function Home(props) {
             
             <div className='card-container'>
                 {getSneakers.map(item => (
-                    <Card key={item.sneakerName} id={item.id} sneakerName={item.sneakerName} shoeImg={item.shoeImg} brandName={item.brandName}/>
+                    <Card key={item.sneakerName} id={item.id} sneakerName={item.sneakerName} shoeImg={`http://localhost:5260${item.shoeImg}`} brandName={item.brandName}/>
                 ))}
             </div>
         </>

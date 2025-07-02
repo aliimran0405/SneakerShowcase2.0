@@ -309,3 +309,4 @@
 /Users/mohammadabdullahimran/Desktop/SneakerShowcase2.0/SneakerShowcaseServer.Api/obj/Debug/net9.0/SneakerShowcaseServer.Api.genruntimeconfig.cache
 /Users/mohammadabdullahimran/Desktop/SneakerShowcase2.0/SneakerShowcaseServer.Api/obj/Debug/net9.0/ref/SneakerShowcaseServer.Api.dll
 /Users/mohammadabdullahimran/Desktop/SneakerShowcase2.0/SneakerShowcaseServer.Api/obj/Debug/net9.0/SneakerShowcaseServer.Api.sourcelink.json
+/Users/mohammadabdullahimran/Desktop/SneakerShowcase2.0/SneakerShowcaseServer.Api/bin/Debug/net9.0/SneakerShowcaseServer.Api.staticwebassets.runtime.json

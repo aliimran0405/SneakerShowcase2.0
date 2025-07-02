@@ -6,7 +6,7 @@ import Nav from './Components/Nav.jsx';
 import { Route, Routes, Navigate} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-import { data } from './Data.jsx';
+
 
 function App() {
 
@@ -14,22 +14,22 @@ function App() {
     const [query, setQuery] = useState("");
     
 
-    const getFilteredItems = (query, items) => {
-        if (!query) {
-            return items;
-        }
-        return items.filter(sneaker => sneaker.sneakerName.toLowerCase().includes(query.toLowerCase()) || sneaker.brandName.toLowerCase().includes(query)); // allow user to search by sneaker name or brand name
-    }
+    // const getFilteredItems = (query, items) => {
+    //     if (!query) {
+    //         return items;
+    //     }
+    //     return items.filter(sneaker => sneaker.sneakerName.toLowerCase().includes(query.toLowerCase()) || sneaker.brandName.toLowerCase().includes(query)); // allow user to search by sneaker name or brand name
+    // }
     
     // Filtered items are name of shoes that matches query
-    const filteredItems = getFilteredItems(query, data);
+    //const filteredItems = getFilteredItems(query, data);
     //console.log(filteredItems);
 
     return(
         <>
             <Nav/>
             <Routes>
-                <Route path='/' element={<Home query={query} setQuery={setQuery} data={filteredItems}/>} />
+                <Route path='/' element={<Home query={query} setQuery={setQuery} />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/sneakers/:sneakerId' element={<ShoePage />} />
             </Routes>

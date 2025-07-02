@@ -23,6 +23,9 @@ var app = builder.Build();
 
 app.UseCors();
 
+// Allow the use of static files which will be sent to client
+app.UseStaticFiles();
+
 app.MapSneakersEndpoints();
 
 app.Run();

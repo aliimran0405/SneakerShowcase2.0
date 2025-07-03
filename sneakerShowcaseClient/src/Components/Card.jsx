@@ -12,7 +12,7 @@ function Card(props) {
     return(
        
             
-                <Link to={`/shoe/${props.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
+                <Link to={`/sneakers/${props.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
                     <div className="card-wrapper" key={props.sneakerName}>
                         <img className="shoe-img" src={props.shoeImg} alt={props.sneakerName} />
                         <p className="brand-name">{props.brandName}</p>

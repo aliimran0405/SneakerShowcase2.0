@@ -29,7 +29,7 @@ function App() {
         <>
             <Nav/>
             <Routes>
-                <Route path='/' element={<Home query={query} setQuery={setQuery} />} />
+                <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/sneakers/:sneakerId' element={<ShoePage />} />
             </Routes>

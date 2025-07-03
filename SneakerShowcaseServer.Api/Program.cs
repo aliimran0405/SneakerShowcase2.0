@@ -27,9 +27,10 @@ var app = builder.Build();
 using var scope = app.Services.CreateScope();
 var db = scope.ServiceProvider.GetRequiredService<SneakerShowcaseContext>();
 
+// Seed initial data (sneakers I have decided to include) here at runtime...
 if (!db.Sneakers.Any())
 {
-    var sneakers = Utils.ReadJSON(); // read JSON here, where environment is ready
+    var sneakers = Utils.ReadJSON();
     db.Sneakers.AddRange(sneakers);
     db.SaveChanges();
 }

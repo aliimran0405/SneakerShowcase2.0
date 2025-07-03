@@ -37,6 +37,7 @@ public static class SneakersEndpoints
         {
             var SneakerEntities = dbContext.Sneakers.ToList();
 
+            // Convert dbContext property to Dto
             var SneakerDtos = SneakerEntities.Select(s => new SneakerDto(
                 s.Id,
                 s.ShoeImg,
@@ -53,10 +54,12 @@ public static class SneakersEndpoints
         group.MapGet("/{id}", async (int id, SneakerShowcaseContext dbContext) =>
         {
             var sneaker = await dbContext.Sneakers.FindAsync(id);
-
+            
+            // Return 404 is no sneaker with matching Id is found
             if (sneaker is null)
                 return Results.NotFound();
 
+            // Convert 'sneaker' entity from db to a Dto before transferring to client
             var sneakerDto = new SneakerDto(
                 sneaker.Id,
                 sneaker.ShoeImg,
